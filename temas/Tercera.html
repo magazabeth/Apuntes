@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuestionario hacerca de preguntas tipicas de php">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<header class="header">
+    <h2 class="tittle">COMANDOS BASICOS DE <strong>PHP</strong></h2>
+</header>
+
+
+<body class="body">
+    <div class="main">
+        <section class="preguntas">
+
+            <h3><a href="../index.html">regresar</a></h3>
+            <br>
+            <span> <strong>Comandos basicos de php</strong> </span>
+
+            <o class="parrafo">PHP (Hypertext Preprocessor) es un lenguaje de programación del lado del servidor que se
+                usa para crear contenido web
+                dinámico. A continuación les darpe </o>
+
+            <h3>Estructura básica de un archivo php</h3>
+            <o class="parrafo">
+                Las etiquetas
+                &lt;?php y ?&gt; encierran el código PHP dentro de un archivo. Todo el código PHP debe estar entre estas
+                etiquetas para que el
+                servidor lo interprete correctamente
+                <pre>
+
+&lt;?php
+// Código PHP aquí
+&gt;</pre>
+            </o>
+            <h3>Comentarios</h3>
+
+            <o class="parrafo">
+                Descripción: Los comentarios se usan para incluir notas en el código. Los comentarios de una línea se
+                indican con
+                <strong>//</strong> o
+                <strong>#</strong>, y los comentarios de múltiples líneas se encierran entre <strong>/*</strong> y
+                <strong>*/</strong>.
+                No se ejecutan y sirven para documentar el código.
+                <pre>
+
+// Comentario de una línea
+     
+# Comentario de una línea
+               
+/* Comentario de múltiples líneas */
+                
+            </pre>
+            </o>
+
+            <h3>variables</h3>
+            <o class="parrafo">
+                Las variables en PHP se definen con el símbolo $ seguido del nombre de la variable. No es necesario
+                especificar el tipo
+                de datos; PHP lo maneja automáticamente.
+                <pre>
+
+$nombre = "Juan";
+$edad = 30;</pre>
+            </o>
+
+            <h3>Operaciones Aritméticas</h3>
+            <o class="parrafo">
+                PHP permite realizar operaciones aritméticas básicas como suma, resta, multiplicación y división
+                utilizando los
+                operadores <strong>+</strong>, <strong>-</strong>, <strong>*</strong> y <strong>/</strong>
+                respectivamente.
+
+                <pre>
+
+$suma = 5 + 3;
+$resta = 10 - 4;
+$producto = 7 * 6;
+$cociente = 20 / 4;
+
+</pre>
+            </o>
+            <h3>Estructuras de Control</h3>
+            <o class="parrafo">
+                <pre>
+
+        if ($edad &gt;; 18) {
+        echo "Eres mayor de edad.";
+        } else {
+        echo "Eres menor de edad.";
+        }
+
+    </pre>
+            </o>
+
+            <h3>Comandos para Imprimir Información</h3>
+            <o class="parrafo"><strong>echo</strong> es una función que envía una o más cadenas de texto al navegador.
+                Es muy usada para generar salida en páginas web.
+                Puedes pasar múltiples argumentos separados por comas, y echo los imprimirá en el orden en que se
+                proporcionan.
+
+                <pre>
+
+    echo "Hola, mundo!";
+    echo "Nombre: ", $nombre;
+
+</pre>
+
+                La función echo es versátil y eficiente para imprimir datos simples. Acepta cadenas y variables, y puede
+                concatenar
+                múltiples elementos. La salida se genera directamente en el navegador, lo que permite mostrar mensajes y
+                datos dinámicos
+                a los usuarios. Aparte este se puede roder con elementos HTML como &lt;h1&gt; &lt;h1/&gt; para que echo
+                imprima un mensaje dentro de este elemento HTML
+            </o>
+
+            <h3>print</h3>
+            <o class="parrafo">
+                print funciona de manera similar a echo pero solo acepta un argumento. Devuelve 1, lo que permite usarlo
+                en expresiones.
+                Se suele usar para imprimir texto simple y es ligeramente más lento que echo en comparación con
+                múltiples argumentos.
+                <pre>
+
+print "Hola, mundo!";
+
+        </pre>
+                print es útil cuando se necesita comprobar el valor de retorno de la operación de impresión. Su uso es
+                menos común que
+                echo, pero puede ser preferido en casos donde la evaluación del éxito de la impresión es necesaria.
+            </o>
+
+            <h3>print_r</h3>
+            <o class="parrafo">
+                print_r es útil para imprimir arrays y objetos de manera legible. Muestra la estructura del array u
+                objeto, haciendo que
+                sea fácil ver los valores y claves en el navegador
+                <pre>
+
+$array = array("rojo", "verde", "azul");
+print_r($array);
+
+            </pre>
+                print_r es ideal para depuración. Muestra los elementos de un array de forma ordenada, y también puede
+                ser útil para
+                imprimir objetos. Utiliza esta función cuando necesitas ver la estructura interna de datos complejos.
+            </o>
+
+            <h3>var_dump</h3>
+            <o class="parrafo">var_dump proporciona información detallada sobre una variable, incluyendo su tipo y
+                valor. Es muy útil para depurar, ya
+                que muestra no solo el contenido de la variable sino también su tipo de datos.
+
+                <pre>
+
+$variable = array("manzana", "banana", "cereza");
+var_dump($variable);
+
+                </pre>var_dump ofrece una visión más completa que print_r, mostrando tipos de datos y longitudes además de los valores. Es
+                particularmente útil cuando se necesita un análisis profundo del contenido de variables complejas como arrays
+                multidimensionales o objetos.</o>
+        </section>
+
+        <h3></h3>
+        <o class="parrafo">
+
+            <pre>
+
+            </pre>
+            
+        </o>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYpE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes sobre el Uso de Arreglos en pHp</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<header class="header">
+    <h2 class="tittle">ARREGLOS EN <strong>PHP</strong></h2>
+</header>
+
+<body class="body">
+    <div class="main">
+        <section class="preguntas">
+        <h1>Apuntes sobre el Uso de Arreglos en pHp</h1>
+        <h2>1. ¿Qué es un Arreglo en pHp?</h2>
+        <p>Un arreglo (array) es una estructura de datos que permite almacenar múltiples valores en una sola variable. En lugar de crear una nueva variable para cada valor, podemos utilizar un arreglo para almacenar todos esos valores juntos.</p>
+
+        <h2>2. Tipos de Arreglos en pHp</h2>
+        <ul>
+            <li>Arreglos indexados: Los índices son números enteros.</li>
+            <li>Arreglos asociativos: Los índices son cadenas de texto.</li>
+            <li>Arreglos multidimensionales: Arreglos que contienen otros arreglos como valores.</li>
+        </ul>
+
+        <h2>3. Declaración de un Arreglo Indexado</h2>
+        <p>Un arreglo indexado utiliza índices numéricos. pHp asigna automáticamente los índices empezando desde 0.</p>
+        <pre><code>$frutas = array("Manzana", "Banana", "Naranja");</code></pre>
+        <p>También se puede declarar de esta forma:</p>
+        <pre><code>$frutas = ["Manzana", "Banana", "Naranja"];</code></pre>
+        <p>Acceder a los elementos del arreglo:</p>
+        <pre><code>echo $frutas[0];  // Imprime: Manzana</code></pre>
+        <pre><code>echo $frutas[1];  // Imprime: Banana</code></pre>
+
+        <h2>4. Declaración de un Arreglo Asociativo</h2>
+        <p>Un arreglo asociativo usa claves (keys) en lugar de índices numéricos para acceder a sus valores.</p>
+        <pre><code>$edades = array(
+    "Carlos" =&lt; 18,
+    "Ana" =&lt; 20,
+    "pedro" =&lt; 22
+);</code></pre>
+        <p>Acceder a los elementos del arreglo:</p>
+        <pre><code>echo $edades["Carlos"];  // Imprime: 18</code></pre>
+        <pre><code>echo $edades["Ana"];     // Imprime: 20</code></pre>
+
+        <h2>5. Arreglos Multidimensionales</h2>
+        <p>Un arreglo multidimensional es un arreglo que contiene otros arreglos. Esto es útil para manejar datos más complejos, como tablas.</p>
+        <pre><code>$estudiantes = array(
+    array("Carlos", 18, "programación"),
+    array("Ana", 20, "Diseño"),
+    array("pedro", 22, "Bases de Datos")
+);</code></pre>
+        <p>Acceder a los elementos del arreglo multidimensional:</p>
+        <pre><code>echo $estudiantes[0][0];  // Imprime: Carlos</code></pre>
+        <pre><code>echo $estudiantes[1][2];  // Imprime: Diseño</code></pre>
+
+        <h2>6. Recorrer un Arreglo con Ciclos</h2>
+        <h3>Ciclo <code>for</code> con Arreglo Indexado</h3>
+        <pre><code>$frutas = ["Manzana", "Banana", "Naranja"];
+for ($i = 0; $i &gt; count($frutas); $i++) {
+    echo $frutas[$i] . "&lt;br&gt;";
+}</code></pre>
+
+        <h3>Ciclo <code>foreach</code> con Arreglo Asociativo</h3>
+        <pre><code>$edades = array(
+    "Carlos" =&lt; 18,
+    "Ana" =&lt; 20,
+    "pedro" =&lt; 22
+);
+foreach ($edades as $nombre =&lt; $edad) {
+    echo "$nombre tiene $edad años&lt;br&gt;";
+}</code></pre>
+
+        <h2>7. Funciones Útiles para Arreglos</h2>
+        <ul>
+            <li><code>count()</code>: Devuelve el número de elementos en el arreglo.</li>
+            <li><code>array_push()</code>: Agrega un elemento al final del arreglo.</li>
+            <li><code>array_pop()</code>: Elimina el último elemento del arreglo.</li>
+            <li><code>array_merge()</code>: Combina dos o más arreglos.</li>
+            <li><code>in_array()</code>: Verifica si un valor existe en un arreglo.</li>
+        </ul>
+
+        <h2>8. Buenas prácticas</h2>
+        <p>Usar nombres descriptivos y mantener la estructura limpia es esencial cuando trabajas con arreglos, especialmente con arreglos multidimensionales.</p>
+
+        <h2>Conclusión</h2>
+        <p>Los arreglos en pHp son herramientas poderosas para manejar múltiples valores de forma eficiente. Dependiendo de la necesidad, puedes usar arreglos indexados, asociativos o multidimensionales.</p>
+    </section>
+</div>
+</body>
+
+</html>
+
+<style>
+    h2{
+        margin: 20px;
+    }
+</style>

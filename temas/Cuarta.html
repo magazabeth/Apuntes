@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Giovany Galeana Memije">
+    <meta name="description" content="Guía ampliada sobre condiciones en PHP">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Condiciones en PHP</title>
+</head>
+
+<header class="header">
+    <h2 class="tittle">CONDICIONES EN <strong>PHP</strong></h2>
+</header>
+
+<body class="body">
+    <div class="main">
+        <section class="preguntas">
+            <h3><a href="../index.html">regresar</a></h3>
+
+            <span>Guía de condiciones en <strong>PHP</strong></span>
+
+            <o class="parrafo">En PHP, las condiciones permiten tomar decisiones dentro de un script según los valores
+                de
+                variables o el resultado de expresiones. Los bloques de código se ejecutan o no dependiendo de
+                si una condición es verdadera (true) o falsa (false).</o>
+
+            <span>Estructuras condicionales básicas en <strong>PHP:</strong></span>
+            <ul>
+                <li>1. <strong>if</strong></li>
+                <li>2. <strong>if-else</strong></li>
+                <li>3. <strong>if-elseif-else</strong></li>
+                <li>4. <strong>switch</strong></li>
+                <li>5. <strong>Operador ternario</strong></li>
+                <li>6. <strong>Operador null coalescente</strong></li>
+            </ul>
+            <br>
+
+            <span>1. <strong>Estructura if</strong></span>
+            <br>
+            <o>La estructura if ejecuta un bloque de código solo si una condición es verdadera.
+            Sintaxis:</o>
+            <pre>
+if (condición) {
+    // Código a ejecutar si la condición es verdadera
+}
+Ejemplo:
+&lt;?php
+$edad = 20;
+if ($edad &gt;= 18) {
+    echo "Eres mayor de edad.";
+}
+?&gt;
+            </pre>
+
+            <span>2. <strong>Estructura if-else</strong></span>
+            <br>
+            <o>La estructura if-else se usa cuando queremos ejecutar un bloque de código si la condición es
+            verdadera, y otro bloque si la condición es falsa.
+</o>
+            <pre>
+if (condición) {
+    // Código si la condición es verdadera
+} else {
+    // Código si la condición es falsa
+}
+Ejemplo:
+&lt;?php
+$hora = 14;
+if ($hora &lt; 12) {
+    echo "Buenos días.";
+} else {
+    echo "Buenas tardes.";
+}
+?&gt;
+            </pre>
+
+            <span>3. <strong>Estructura if-elseif-else</strong></span>
+            <br>
+            <o>La estructura if-elseif-else se utiliza cuando hay múltiples condiciones que deben ser evaluadas
+            en orden.</o>
+            <pre>
+if (condición1) {
+    // Código si la condición1 es verdadera
+} elseif (condición2) {
+    // Código si la condición2 es verdadera
+} else {
+    // Código si ninguna de las condiciones anteriores es verdadera
+}
+Ejemplo:
+&lt;?php
+$calificacion = 85;
+if ($calificacion &gt;= 90) {
+    echo "Excelente";
+} elseif ($calificacion &gt;= 80) {
+    echo "Muy bien";
+} elseif ($calificacion &gt;= 70) {
+    echo "Bien";
+} else {
+    echo "Necesitas mejorar";
+}
+?&gt;
+            </pre>
+
+            <span>4. <strong>Estructura switch</strong></span>
+            <br>
+            <o>La estructura switch se utiliza cuando una variable o expresión puede tener varios valores
+            posibles y se desea ejecutar un bloque de código específico para cada valor.</o>
+            <pre>
+switch (expresión) {
+    case valor1:
+        // Código si la expresión es igual a valor1
+        break;
+    case valor2:
+        // Código si la expresión es igual a valor2
+        break;
+    default:
+        // Código si la expresión no coincide con ningún valor anterior
+}
+Ejemplo:
+&lt;?php
+$dia = "lunes";
+switch ($dia) {
+    case "lunes":
+        echo "Hoy es lunes.";
+        break;
+    case "martes":
+        echo "Hoy es martes.";
+        break;
+    case "miércoles":
+        echo "Hoy es miércoles.";
+        break;
+    default:
+        echo "No es ni lunes, ni martes, ni miércoles.";
+}
+?&gt;
+            </pre>
+
+            <span>5. <strong>Operador ternario</strong></span>
+            <br>
+            <o>El operador ternario es una forma abreviada de escribir una condición if-else.</o>
+            <pre>
+condición ? valor_si_verdadero : valor_si_falso;
+Ejemplo:
+&lt;?php
+$edad = 20;
+echo ($edad &gt;= 18) ? "Eres mayor de edad." : "Eres menor de edad.";
+?&gt;
+            </pre>
+
+            <span>6. <strong>Operador Null Coalescente</strong></span>
+            <br>
+            <o>El operador null coalescente (??) permite verificar si una variable está definida y no es null. Si
+            la variable no está definida o es null, se evalúa el valor a la derecha del operador.</o>
+            <pre>
+$variable = expresión ?? valor_si_null;
+Ejemplo:
+&lt;?php
+$nombre = $_GET['nombre'] ?? 'Invitado';
+echo "Hola, $nombre";
+?&gt;
+            </pre>
+
+            <span>Condiciones Complejas</span>
+            <pre>
+Las condiciones en PHP también pueden combinar múltiples comparaciones y operadores
+lógicos (&&, ||, etc.) para evaluar varias expresiones a la vez.
+Ejemplo con operadores lógicos:
+&lt;?php
+$edad = 25;
+$licencia = true;
+if ($edad &gt;= 18 && $licencia) {
+    echo "Puedes conducir.";
+} else {
+    echo "No puedes conducir.";
+}
+?&gt;
+            </pre>
+
+            <span>Ejemplo Completo con Formulario (Condiciones)</span>
+            <o>Aquí mostramos cómo usar condiciones en un contexto más realista con formularios.</o>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;style&gt;
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+text-align: center;
+padding: 50px;
+}
+
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: inline-block;
+}
+input[type="text"], input[type="number"] {
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 80%;
+}
+input[type="submit"] {
+padding: 10px 20px;
+background-color: #5cb85c;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Formulario de Evaluación&lt;/h1&gt;
+&lt;span&gt;ejemplo de cómo se ve: &lt;/span&gt;
+&lt;form action="" method="POST"&gt;
+&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
+        
+&lt;label for="calificacion"&gt;Calificación:&lt;/label&gt;&lt;br&gt;
+&lt;input type="number" id="calificacion" name="calificacion" min="0" max="100"&gt;&lt;br&gt;&lt;br&gt;
+        
+&lt;input type="submit" value="Evaluar"&gt;
+&lt;/form&gt;
+        
+&lt;?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+$nombre = htmlspecialchars($_POST['nombre']);
+$calificacion = (int)$_POST['calificacion'];
+if ($calificacion &gt;= 90) {
+echo "&lt;p&gt;¡Felicidades, $nombre! Tu desempeño es excelente.&lt;/p&gt;";
+} elseif ($calificacion &gt;= 70) {
+echo "&lt;p&gt;¡Bien hecho, $nombre! Has pasado, pero puedes mejorar.&lt;/p&gt;";
+} else {
+echo "&lt;p&gt;Lo siento, $nombre. Necesitas esforzarte más.&lt;/p&gt;";
+}
+
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+
+            <span>Conclusión</span>
+            <o class="parrafo">El uso de condiciones en PHP es fundamental para construir lógica en tus aplicaciones.
+                Existen
+                varias formas de hacer decisiones basadas en comparaciones y operadores lógicos,
+                adaptándose a diferentes casos. Las estructuras condicionales permiten controlar el flujo del
+                programa de manera eficiente, asegurando que las acciones correctas se ejecuten bajo las
+                circunstancias adecuadas.</o>
+        </section>
+    </div>
+
+</body>
+
+</html>

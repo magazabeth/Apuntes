@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tablas.css">
+</head>
+
+
+
+<body class="body">
+  <h4><a href="../index.html">Regresar</a></h4>
+    <div class="main">
+
+
+        <section class="preguntas">
+  
+
+            <h1>Tipos de Variables y Constantes en PHP</h1>
+            <br>
+            <h2>1. Variables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Características</th>
+                        <th>Uso</th>
+                        <th>Nombres válidos</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>String</strong></td>
+                        <td>Una cadena de caracteres. No tiene límite de longitud en teoría.</td>
+                        <td>Se usa para almacenar texto.</td>
+                        <td>
+                            Debe empezar con un símbolo de dólar (<code>$</code>), seguido de una letra o guion bajo.
+                        </td>
+                        <td>
+                            <code>$nombre = "Juan";</code><br>
+                            Carga: <code>echo $nombre;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integer</strong></td>
+                        <td>Números enteros, positivos o negativos.</td>
+                        <td>Se usa para almacenar números sin decimales.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>$edad = 25;</code><br>
+                            Carga: <code>echo $edad;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Float</strong></td>
+                        <td>Números con punto decimal (flotantes).</td>
+                        <td>Se usa para almacenar números decimales.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>$precio = 19.99;</code><br>
+                            Carga: <code>echo $precio;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boolean</strong></td>
+                        <td>Puede tener dos valores: <code>true</code> o <code>false</code>.</td>
+                        <td>Se usa para lógica binaria.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>$activo = true;</code><br>
+                            Carga: <code>echo $activo;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Array</strong></td>
+                        <td>Conjunto de valores almacenados en una única variable.</td>
+                        <td>Se usa para almacenar múltiples valores.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>$frutas = array("manzana", "naranja", "mango");</code><br>
+                            Carga: <code>echo $frutas[1];</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Object</strong></td>
+                        <td>Una instancia de una clase. Puede contener propiedades y métodos.</td>
+                        <td>Se usa para programación orientada a objetos.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>class Persona { public $nombre = "Juan"; }</code><br>
+                            <code>$persona = new Persona();</code><br>
+                            Carga: <code>echo $persona-&lt;nombre;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>NULL</strong></td>
+                        <td>Representa la ausencia de valor.</td>
+                        <td>Se usa cuando una variable no tiene valor.</td>
+                        <td>Debe seguir las reglas generales de las variables en PHP.</td>
+                        <td>
+                            <code>$variable = NULL;</code><br>
+                            Carga: <code>echo $variable;</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h2>2. Constantes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Características</th>
+                        <th>Uso</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Constantes en PHP</strong></td>
+                        <td>Las constantes no pueden cambiar su valor una vez asignadas.</td>
+                        <td>Se usan para valores fijos que no deben cambiar.</td>
+                        <td>
+                            <code>define("PI", 3.1416);</code><br>
+                            Carga: <code>echo PI;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Constantes mágicas</strong></td>
+                        <td>Son predefinidas por PHP y cambian según el contexto.</td>
+                        <td>Se usan para obtener información del entorno de ejecución.</td>
+                        <td>
+                            <code>echo __FILE__;</code> (Muestra el archivo actual)<br>
+                            <code>echo __LINE__;</code> (Muestra la línea actual)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>PHP_VERSION</strong></td>
+                        <td>Contiene la versión de PHP en ejecución.</td>
+                        <td>Se usa para verificar la versión de PHP.</td>
+                        <td>
+                            <code>echo PHP_VERSION;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>PHP_OS</strong></td>
+                        <td>Contiene el nombre del sistema operativo en el que PHP se está ejecutando.</td>
+                        <td>Se usa para obtener información del sistema operativo.</td>
+                        <td>
+                            <code>echo PHP_OS;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>DIRECTORY_SEPARATOR</strong></td>
+                        <td>Contiene el separador de directorios para el sistema operativo actual.</td>
+                        <td>Se usa para construir rutas de archivos de forma segura.</td>
+                        <td>
+                            <code>echo DIRECTORY_SEPARATOR;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>PHP_INT_MAX</strong></td>
+                        <td>Contiene el valor máximo de un entero en PHP.</td>
+                        <td>Se usa para verificar los límites de los enteros.</td>
+                        <td>
+                            <code>echo PHP_INT_MAX;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>PHP_EOL</strong></td>
+                        <td>Contiene el carácter de salto de línea adecuado para el sistema operativo actual.</td>
+                        <td>Se usa para generar saltos de línea en una salida.</td>
+                        <td>
+                            <code>echo PHP_EOL;</code>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+
+            <h2>4. Operadores en PHP</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Características</th>
+                        <th>Uso</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Operadores Aritméticos</strong></td>
+                        <td>Realizan operaciones matemáticas básicas.</td>
+                        <td>Se usan para realizar cálculos.</td>
+                        <td>
+                            <code>$suma = 5 + 3;</code><br>
+                            <code>$resta = 5 - 3;</code><br>
+                            <code>$multiplicacion = 5 * 3;</code><br>
+                            <code>$division = 5 / 3;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operadores de Comparación</strong></td>
+                        <td>Comparan dos valores y retornan un valor booleano.</td>
+                        <td>Se usan para comparar valores en condiciones.</td>
+                        <td>
+                            <code>$igual = (5 == 3);</code><br>
+                            <code>$mayor = (5 &gt; 3);</code><br>
+                            <code>$menor_o_igual = (5 &lt;= 3);</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operadores Lógicos</strong></td>
+                        <td>Operan sobre valores booleanos.</td>
+                        <td>Se usan para combinar múltiples condiciones.</td>
+                        <td>
+                            <code>$y = (true && false);</code><br>
+                            <code>$o = (true || false);</code><br>
+                            <code>$no = !true;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operadores de Asignación</strong></td>
+                        <td>Asignan valores a las variables.</td>
+                        <td>Se usan para asignar o modificar valores de variables.</td>
+                        <td>
+                            <code>$x = 5;</code><br>
+                            <code>$x += 3;</code> (equivalente a <code>$x = $x + 3;</code>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operadores de Cadena</strong></td>
+                        <td>Operan sobre cadenas de texto.</td>
+                        <td>Se usan para concatenar cadenas.</td>
+                        <td>
+                            <code>$texto = "Hola " . "Mundo!";</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>
